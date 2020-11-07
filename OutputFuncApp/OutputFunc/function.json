@@ -1,0 +1,19 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "msg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "mparticlesbusqueue",
+      "connection": "AzureWebJobsMyServiceBus"
+    },
+    {
+        "name": "outputblob",
+        "type": "blob",
+        "path": "jsonfiles/payload.json",
+        "connection": "AzureWebJobsStorage",
+        "direction": "out"
+    }
+  ]
+}
